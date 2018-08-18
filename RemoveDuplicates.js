@@ -1,11 +1,11 @@
-function removeDuplicates(str) {
+function processString(str) {
     var map = new Array();
     var duplicates = new Array();
     var duplicatesStr = "";
 
     // O(N) run time in length of string
     var result = deDuplicateStr(str, map, duplicates);
-    console.log("String with duplicates removed is: " + result + "\n");
+    console.log("\nString with duplicates removed is: " + result + "\n");
 
     duplicatesStr = printDuplicateCharsAndFreqs(str, duplicates, duplicatesStr, map);
     printStrsBackWardAndForward(duplicatesStr, result);
@@ -28,7 +28,7 @@ function deDuplicateStr(str, map, duplicates) {
 }
 
 function printDuplicateCharsAndFreqs(str, duplicates, duplicatesStr, map) {
-    console.log("Duplicate characters and their frequencies: ");
+    console.log("Duplicate characters and their frequencies:\n");
     for (var i = 0; i < str.length; i++) {
         var char = str[i];
         if (char in duplicates) {
@@ -47,8 +47,8 @@ function printStrsBackWardAndForward(duplicatesStr, result) {
      // sorting will take O(NlogN) which ends up being worst time complexity
     console.log("\nDuplicate string sorted forward: " + duplicatesStr.split("").sort().join("") + "\n");
     console.log("Duplicate string sorted backward: " + duplicatesStr.split("").sort(backwardCompare).join("") + "\n");
-    console.log("\nDe-duplicated string sorted forward: " + result.split("").sort().join("") + "\n");
+    console.log("De-duplicated string sorted forward: " + result.split("").sort().join("") + "\n");
     console.log("De-duplicated string sorted backward: " + result.split("").sort(backwardCompare).join("") + "\n");
 }
 
-removeDuplicates("testertester");
+processString("testertester");
