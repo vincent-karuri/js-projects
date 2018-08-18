@@ -1,6 +1,5 @@
 
 function isAllCharacters(arr) {
-
 	var regex = /^[a-z]+$/i;
 	console.log("\n1. Test if a string contains only characters:\n");
 	for (var i = 0; i < arr.length; i++) {
@@ -14,7 +13,6 @@ function isAllCharacters(arr) {
 }
 
 function containsSubString(str) {
-
 	var result = [];
 	var regex = /foo/g;
 	var arr = str.split(" ");
